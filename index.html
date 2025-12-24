@@ -248,7 +248,7 @@
             const borderGeo = new THREE.PlaneGeometry(9, 9); 
             const borderMat = new THREE.MeshBasicMaterial({ color: 0xFFD700 }); 
 
-            for(let i=0; i<5; i++) {
+            for(let i=0; i<10; i++) {
                 const mat = new THREE.MeshBasicMaterial({ map: photoTextures[i], side: THREE.DoubleSide });
                 const mesh = new THREE.Mesh(geo, mat);
                 const border = new THREE.Mesh(borderGeo, borderMat);
@@ -419,7 +419,7 @@
                 photoMeshes.forEach((mesh, i) => {
                     mesh.visible = true;
                     // Distribute photos evenly on a circle
-                    const angleStep = (Math.PI * 2) / 5; 
+                    const angleStep = (Math.PI * 2) / 10; 
                     const baseAngle = i * angleStep;
                     
                     // Calculate base position (orbiting)
